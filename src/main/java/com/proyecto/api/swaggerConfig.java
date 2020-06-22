@@ -25,12 +25,10 @@ public class swaggerConfig implements WebMvcConfigurer {
                 .apis(RequestHandlerSelectors.basePackage("com.proyecto.api"))
                 .paths(regex("/user.*"))
                 .build()
-                .apiInfo(metaInfo());
+                .apiInfo(infoSwagger());
     }
-
-    private ApiInfo metaInfo() {
-
-        ApiInfo apiInfo = new ApiInfo(
+    private ApiInfo infoSwagger() {
+        ApiInfo info = new ApiInfo(
                 "User API REST",
                 "API REST. Methods to create, read, update and delete for software developer community.",
                 "1.0.0",
@@ -40,11 +38,9 @@ public class swaggerConfig implements WebMvcConfigurer {
                 "MIT",
                 ""
         );
-
-        return apiInfo;
+        return info;
     }
-
-/**    @Override
+    /**@Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addRedirectViewController(PATH, "/");
     }
@@ -53,5 +49,5 @@ public class swaggerConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(PATH + "/**").addResourceLocations("classpath:/META-INF/resources/");
     }
- */
+    */
 }
