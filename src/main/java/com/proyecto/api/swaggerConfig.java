@@ -32,7 +32,7 @@ public class swaggerConfig implements WebMvcConfigurer {
 
         ApiInfo apiInfo = new ApiInfo(
                 "User API REST",
-                "API REST customer create read update and delete for comunity developer",
+                "API REST. Methods to create, read, update and delete for software developer community.",
                 "1.0.0",
                 "Terms of Service",
                 new Contact("Diego Quiroz Ramirez - (Software Developer)", "https://github.com/diegoquirozramirez",
